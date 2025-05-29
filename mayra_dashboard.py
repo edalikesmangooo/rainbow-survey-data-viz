@@ -2062,8 +2062,8 @@ def main():
         # Clean dataset - ensure no extra rows
         total_responses = len(df)
         
-        # Engagement: Q3 or Q6 positive (Likert 1 or 2)
-        high_engagement = (df['Q3_have_fun'].isin([1,2]) | df['Q6_enjoyed_fig'].isin([1,2])).sum()
+        # Engagement: Q3 and Q6 positive (Likert 1 or 2)
+        high_engagement = (df['Q3_have_fun'].isin([1,2]) & df['Q6_enjoyed_fig'].isin([1,2])).sum()
         engagement_percentage = (high_engagement / total_responses) * 100
         
         # Understood: Q9 positive (Likert 1 or 2)
