@@ -1744,17 +1744,6 @@ def create_ai_summary_metrics(df):
 # =====================================================
 # COLLAB STATISTICAL ANALYSIS FUNCTION
 # =====================================================
-try:
-    from scipy.stats import kruskal, mannwhitneyu
-    SCIPY_AVAILABLE = True
-except ImportError:
-    SCIPY_AVAILABLE = False
-    # Create dummy functions so the code doesn't crash
-    def kruskal(*args):
-        return 0, 1.0
-    def mannwhitneyu(*args, **kwargs):
-        return 0, 1.0
-
 def run_kruskal_posthoc(group_df, questions):
     """
     Perform Kruskal-Wallis tests for specified questions and post-hoc Mann-Whitney U tests if significant.
