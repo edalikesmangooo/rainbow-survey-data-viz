@@ -4,6 +4,7 @@
 An interactive web dashboard for analyzing learning game survey data from the Rainbow Agents study.
 
 ## 🌐 Live Dashboard
+https://huggingface.co/spaces/km3d4/rainbow-survey-data-viz
 
 
 ## 📊 What This Dashboard Shows
